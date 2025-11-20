@@ -126,9 +126,8 @@ export const archivo = Archivo_Black({
 });
 
 export const metadata: Metadata = {
-  title: "Metaverse Experience | Build Your Virtual World",
-  description:
-    "Create your stunning new metaverse world with immersive visuals and futuristic neon UI.",
+  title: "Lifinity",
+  description: "Discover the hidden life in tech.",
   keywords: [
     "Metaverse",
     "Virtual Reality",
@@ -138,7 +137,21 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Your Name" }],
   icons: {
-    icon: "/favicon.ico",
+    // Primary icon(s) - uses `logo.png` from public/ as canonical PNG fallback
+    icon: [
+      { url: "/logo.png", type: "image/png", sizes: "any" },
+      { url: "/logo.png", type: "image/png", sizes: "192x192" },
+      { url: "/logo.png", type: "image/png", sizes: "512x512" },
+    ],
+    // Shortcut icon (used by some browsers)
+    shortcut: "/logo.png",
+    // Apple touch icon for iOS home screen
+    apple: "/logo.png",
+    // Additional link relations (manifest + mask-icon) — helps pinned tabs & PWA
+    other: [
+      { rel: "manifest", url: "/site.webmanifest" },
+      { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#c70059" },
+    ],
   },
 };
 
